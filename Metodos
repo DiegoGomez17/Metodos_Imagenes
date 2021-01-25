@@ -1,9 +1,9 @@
- public static byte[] EncodeImage(BitmapSource bitmapSource)
+ public static byte[] EncodeImage(BitmapSource bitmapImage)
         {
 
             byte[] imageByte;
             JpegBitmapEncoder encoder = new JpegBitmapEncoder();
-            encoder.Frames.Add(BitmapFrame.Create(bitmapSource));
+            encoder.Frames.Add(BitmapFrame.Create(bitmapImage));
 
             using (MemoryStream ms = new MemoryStream())
             {
